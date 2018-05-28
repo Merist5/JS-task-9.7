@@ -85,7 +85,7 @@ function checkRoundWinner(playerPick, computerPick) {
 
   var winnerIs = 'player';
 
-    if (playerPick === computerPick) {
+    if (playerPick == computerPick) {
         winnerIs = 'noone';
         playerResultElem.innerHTML = "Tie!";
         computerResultElem.innerHTML = "Tie!";
@@ -94,15 +94,15 @@ function checkRoundWinner(playerPick, computerPick) {
         (computerPick == 'Scissors' &&  playerPick == 'Paper') ||
         (computerPick == 'Paper' &&  playerPick == 'Rock')) {
 
-        winnerIs === 'computer';
+        winnerIs == 'computer';
     }
 
-    if (winnerIs === 'player') {
+    if (winnerIs == 'player') {
         player.score++;
         playerPointsElem.innerHTML = player.score;
         playerResultElem.innerHTML = 'Win!';
         computerResultElem.innerHTML = 'Lose!';
-    } else if (winnerIs === 'computer') {
+    } else if (winnerIs == 'computer') {
         computer.score++;
         computerPointsElem.innerHTML = computer.score;
         computerResultElem.innerHTML = 'Win!';
