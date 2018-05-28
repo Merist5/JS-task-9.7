@@ -94,7 +94,7 @@ function checkRoundWinner(playerPick, computerPick) {
         (computerPick == 'Scissors' &&  playerPick == 'Paper') ||
         (computerPick == 'Paper' &&  playerPick == 'Rock')) {
 
-        winnerIs == 'computer';
+        winnerIs = 'computer';
     }
 
     if (winnerIs == 'player') {
