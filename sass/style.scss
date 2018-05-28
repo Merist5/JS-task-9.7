@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+$font-w: 600;
+$font-s: 20px;
+$white: #fff;
+$green: #4CBB17;
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  font-weight: $font-w;
+  font-size: 40px;
+}
+
+.btn {
+  margin: 15px;
+  padding: 15px;
+  font-size: $font-s;
+  border-radius: 10%;
+}
+
+.badge {
+  font-size: $font-s;
+}
+
+#js-newGameButton {
+  background-color: $green;
+  color: $white;
+  font-weight: $font-w;
+  padding: 20px 30px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+#js-resultsTableElement {
+  margin-top: 25px;
+  font-size: $font-s;
+}

@@ -94,20 +94,36 @@ function checkRoundWinner(playerPick, computerPick) {
         (computerPick == 'Scissors' &&  playerPick == 'Paper') ||
         (computerPick == 'Paper' &&  playerPick == 'Rock')) {
 
-        winnerIs = 'computer';
+        winnerIs === 'computer';
     }
 
-    if (winnerIs == 'player') {
-        playerResultElem.innerHTML = "Win!";
+    if (winnerIs === 'player') {
         player.score++;
-    } else if (winnerIs == 'computer') {
-        computerResultElem.innerHTML = "Win!";
+        playerPointsElem.innerHTML = player.score;
+        playerResultElem.innerHTML = 'Win!';
+        computerResultElem.innerHTML = 'Lose!';
+    } else if (winnerIs === 'computer') {
         computer.score++;
+        computerPointsElem.innerHTML = computer.score;
+        computerResultElem.innerHTML = 'Win!';
+        playerResultElem.innerHTML = 'Lose!';
     }
+    endGame();
 }
 
-function ended() {
-  if (computer.score == 10 || player.score == 10) {
-    gameState = 'ended';
+function vanishScore() {
+  player.score = 0;
+  computer.score = 0;
+  playerPointsElem.innerHTML = player.score;
+  computerPointsElem.innerHTML = computer.score;
+  playerResultElem.innerHTML = computerResultElem.innerHTML = '';
+}
+
+function endGame() {
+  if (player.score === 10 || computer.score === 10) {
+      alert(player.score === 10?'Player wins!':'Computer wins!');
+      gameState = 'ended';
+      setGameElements();
+      vanishScore();
   }
 }
